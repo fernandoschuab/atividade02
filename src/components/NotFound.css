@@ -1,0 +1,21 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+}
+
+.notfound-title {
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.notfound-text {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #666;
+  font-size: 18px;
+}

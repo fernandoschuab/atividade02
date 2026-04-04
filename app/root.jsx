@@ -24,7 +24,7 @@ export const links = () => [
 
 export function Layout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,8 +40,14 @@ export function Layout({ children }) {
   );
 }
 
+import { MovieContextProvider } from "../src/Context/MovieContext";
+
 export default function App() {
-  return <Outlet />;
+  return (
+    <MovieContextProvider>
+      <Outlet />
+    </MovieContextProvider>
+  );
 }
 
 export function ErrorBoundary({ error }) {

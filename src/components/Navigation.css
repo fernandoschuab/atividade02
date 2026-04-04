@@ -1,0 +1,28 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 500px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-link.active {
+  background-color: #e60023; /* Pinterest Red */
+  color: white;
+}
