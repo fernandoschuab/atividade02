@@ -1,13 +1,13 @@
 .search-form {
   display: flex;
-  align-items: stretch; /* Faz com que o botão acompanhe a altura 100% do input */
+  align-items: stretch;
   width: 100%;
   max-width: 450px;
-  background-color: white;
+  background-color: var(--bg-input);
   border-radius: 50px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .search-input {
@@ -17,12 +17,13 @@
   outline: none;
   font-family: inherit;
   font-size: 16px;
-  color: #333;
+  color: var(--text-primary);
+  background-color: transparent;
 }
 
 .search-button {
   padding: 0 32px; 
-  background-color: #ef798a;
+  background-color: var(--accent-color);
   color: white;
   border: none;
   cursor: pointer;
@@ -34,7 +35,7 @@
 }
 
 .search-button:hover {
-  background-color: #e36879;
+  background-color: var(--accent-hover);
 }
 
 .search-button:disabled {

@@ -3,15 +3,15 @@
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px var(--shadow-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  background-color: #fff;
+  background-color: var(--bg-card);
   cursor: pointer;
 }
 
 .image-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px var(--shadow-hover);
 }
 
 .image-poster {
@@ -56,5 +56,5 @@
 .image-rating {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
-  color: #fbbf24;
+  color: var(--rating-color);
 }

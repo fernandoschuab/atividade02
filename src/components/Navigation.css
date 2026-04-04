@@ -11,18 +11,18 @@
   border-radius: 500px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  color: #333;
-  background-color: #f0f0f0;
+  color: var(--text-primary);
+  background-color: var(--bg-nav);
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px var(--shadow-color);
 }
 
 .nav-link:hover {
-  background-color: #e0e0e0;
+  background-color: var(--bg-nav-hover);
 }
 
 .nav-link.active {
-  background-color: #e60023;
+  background-color: var(--accent-color);
   color: white;
 }

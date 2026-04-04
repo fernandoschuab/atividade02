@@ -7,15 +7,21 @@
   text-align: center;
 }
 
+.notfound-icon {
+  font-size: 96px;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+}
+
 .notfound-title {
   font-family: 'Lobster', cursive;
   font-size: 36px;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
 .notfound-text {
   font-family: 'Josefin Sans', sans-serif;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 18px;
 }

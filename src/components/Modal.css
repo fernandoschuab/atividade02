@@ -13,14 +13,14 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: 24px;
   width: 90%;
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   animation: modalFadeIn 0.3s ease;
 }
 
@@ -39,7 +39,8 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  background: #f0f0f0;
+  background: var(--bg-nav);
+  color: var(--text-primary);
   border: none;
   font-size: 24px;
   font-family: Arial, sans-serif;
@@ -55,7 +56,7 @@
 }
 
 .modal-close:hover {
-  background: #e0e0e0;
+  background: var(--bg-nav-hover);
 }
 
 .modal-body {
@@ -96,7 +97,7 @@
   font-family: 'Josefin Sans', sans-serif;
   font-size: 32px;
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -105,18 +106,18 @@
   gap: 16px;
   align-items: center;
   font-family: 'Josefin Sans', sans-serif;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 16px;
 }
 
 .modal-rating {
   font-weight: bold;
-  color: #d97706;
+  color: var(--rating-color);
 }
 
 .modal-description {
   font-family: 'Josefin Sans', sans-serif;
-  color: #444;
+  color: var(--text-primary);
   line-height: 1.6;
   font-size: 18px;
   margin: 0;

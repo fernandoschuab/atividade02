@@ -9,19 +9,19 @@
 
 .no-image-icon {
   font-size: 80px;
-  color: #ccc;
+  color: var(--border-color);
   margin-bottom: 20px;
 }
 
 .no-image-title {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 24px;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 12px;
 }
 
 .no-image-text {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  color: #666;
+  color: var(--text-secondary);
 }

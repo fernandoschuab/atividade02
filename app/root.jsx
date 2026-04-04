@@ -41,13 +41,16 @@ export function Layout({ children }) {
 }
 
 import { MovieContextProvider } from "../src/Context/MovieContext";
+import { ThemeContextProvider } from "../src/Context/ThemeContext";
 import NotFoundComponent from "../src/components/NotFound";
 
 export default function App() {
   return (
-    <MovieContextProvider>
-      <Outlet />
-    </MovieContextProvider>
+    <ThemeContextProvider>
+      <MovieContextProvider>
+        <Outlet />
+      </MovieContextProvider>
+    </ThemeContextProvider>
   );
 }
 
