@@ -23,6 +23,6 @@
 }
 
 .nav-link.active {
-  background-color: #e60023; /* Pinterest Red */
+  background-color: #e60023;
   color: white;
 }

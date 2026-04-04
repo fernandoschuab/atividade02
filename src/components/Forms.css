@@ -21,8 +21,8 @@
 }
 
 .search-button {
-  padding: 0 32px; /* O height agora é ditado pelo stretch */
-  background-color: #ef798a; /* Soft red from image */
+  padding: 0 32px; 
+  background-color: #ef798a;
   color: white;
   border: none;
   cursor: pointer;

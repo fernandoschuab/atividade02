@@ -41,6 +41,7 @@ export function Layout({ children }) {
 }
 
 import { MovieContextProvider } from "../src/Context/MovieContext";
+import NotFoundComponent from "../src/components/NotFound";
 
 export default function App() {
   return (
@@ -64,6 +65,14 @@ export function ErrorBoundary({ error }) {
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
     stack = error.stack;
+  }
+
+  if (message === "404") {
+    return (
+      <main className="w-full h-screen bg-gray-50 flex items-center justify-center">
+         <NotFoundComponent />
+      </main>
+    );
   }
 
   return (
