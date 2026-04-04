@@ -17,11 +17,17 @@ export function ThemeContextProvider({ children }) {
 
   useEffect(() => {
     if (theme === "dark") {
+      document.documentElement.classList.add("dark");
       document.body.classList.add("dark");
     } else {
+      document.documentElement.classList.remove("dark");
       document.body.classList.remove("dark");
     }
-    localStorage.setItem("movie-finder-theme", theme);
+    try {
+      localStorage.setItem("movie-finder-theme", theme);
+    } catch (e) {
+      console.warn("Storage bloqueado no Safari");
+    }
   }, [theme]);
 
   function toggleTheme() {

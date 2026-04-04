@@ -16,7 +16,7 @@
   --rating-color: #fbbf24;
 }
 
-body.dark {
+:root.dark, body.dark {
   --bg-body: #121212;
   --bg-card: #1e1e1e;
   --bg-input: #2a2a2a;
