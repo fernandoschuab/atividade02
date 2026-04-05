@@ -32,9 +32,9 @@ export default function Container({ searchTerm }) {
       <h2 className="container-title">
         {activeTerm === "Favoritos" 
           ? "Meus Filmes Favoritos" 
-          : activeTerm 
+          : activeTerm && activeTerm !== "Popular"
             ? `Filmes de ${activeTerm}` 
-            : "Filmes Populares"}
+            : "Filmes Em Cartaz"}
       </h2>
       
       {activeTerm === "Favoritos" && favorites.length === 0 ? (

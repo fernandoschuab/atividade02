@@ -40,9 +40,9 @@ export function MovieContextProvider({ children }) {
     if (!query) return;
     setLoading(true);
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
-        query
-      )}&language=pt-BR`;
+      const url = query === "Popular"
+        ? `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=pt-BR`
+        : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}&language=pt-BR`;
       const response = await axios.get(url);
       setMovies(response.data.results || []);
     } catch (error) {

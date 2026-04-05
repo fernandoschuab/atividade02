@@ -17,7 +17,7 @@ export default function Navigation() {
         to="/search/Popular"
         className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
       >
-        Popular
+        Em Cartaz
       </NavLink>
       <NavLink
         to="/search/Acao"
