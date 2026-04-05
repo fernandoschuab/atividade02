@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-B-UkbJDG.js";var t=e();function n(){return(0,t.jsxs)(`div`,{className:`notfound-container`,children:[(0,t.jsx)(`h2`,{className:`notfound-title`,children:`404 - Página Não Encontrada`}),(0,t.jsx)(`p`,{className:`notfound-text`,children:`Desculpe, não conseguimos encontrar a página que você está procurando.`})]})}export{n as t};

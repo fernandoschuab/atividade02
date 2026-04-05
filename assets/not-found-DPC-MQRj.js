@@ -1,0 +1,1 @@
+import{A as e,t}from"./jsx-runtime-B-UkbJDG.js";import{t as n}from"./NotFound-Cow1Hdis.js";var r=t(),i=e(function(){return(0,r.jsx)(n,{})});export{i as default};
