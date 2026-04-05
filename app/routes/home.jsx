@@ -6,7 +6,7 @@ import "./home.css";
 
 export function meta() {
   return [
-    { title: "Movie Finder" },
+    { title: "Bora comer pipoca?" },
     { name: "description", content: "Busque seus filmes favoritos" },
   ];
 }

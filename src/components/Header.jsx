@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className="header-container">
       <div className="header-top">
-        <h1 className="header-title">Movie Finder</h1>
+        <h1 className="header-title">Bora comer pipoca?</h1>
         <button className="theme-toggle" onClick={toggleTheme}>
           {theme === "light" ? <FaMoon /> : <FaSun />}
         </button>
