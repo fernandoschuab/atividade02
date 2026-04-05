@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TMDB_IMAGE_BASE_URL } from "../api/config";
 import Modal from "./Modal";
+import { TbMovieOff } from "react-icons/tb";
 import "./Image.css";
 
 export default function Image({
@@ -11,15 +12,27 @@ export default function Image({
   release_date,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
-  const imageUrl = poster_path
-    ? `${TMDB_IMAGE_BASE_URL}${poster_path}`
-    : "https://via.placeholder.com/500x750.png?text=Sem+Poster";
+  const hasImage = poster_path && !imageError;
+  const imageUrl = hasImage ? `${TMDB_IMAGE_BASE_URL}${poster_path}` : null;
 
   return (
     <>
       <div className="image-card" onClick={() => setIsModalOpen(true)}>
-        <img src={imageUrl} alt={title} className="image-poster" />
+        {hasImage ? (
+          <img 
+            src={imageUrl} 
+            alt={title} 
+            className="image-poster" 
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="image-fallback">
+            <TbMovieOff className="image-fallback-icon" />
+            <span className="image-fallback-text">Sem imagem</span>
+          </div>
+        )}
         <div className="image-overlay">
           <h3 className="image-title">{title}</h3>
           {vote_average > 0 && (
