@@ -20,19 +20,19 @@ export default function Navigation() {
         Popular
       </NavLink>
       <NavLink
-        to="/search/Ação"
+        to="/search/Acao"
         className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
       >
         Ação
       </NavLink>
       <NavLink
-        to="/search/Comédia"
+        to="/search/Comedia"
         className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
       >
         Comédia
       </NavLink>
       <NavLink
-        to="/search/Animação"
+        to="/search/Animacao"
         className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
       >
         Animação
