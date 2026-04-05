@@ -1,4 +1,4 @@
 export default {
   ssr: false,
-  basename: "/atividade02/",
+  basename: process.env.NODE_ENV === "production" ? "/atividade02/" : "/",
 };
