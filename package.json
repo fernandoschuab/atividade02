@@ -2,10 +2,13 @@
   "name": "atividade02",
   "private": true,
   "type": "module",
+  "homepage": "https://fernandoschuab.github.io/atividade02/",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js"
+    "start": "react-router-serve ./build/server/index.js",
+    "predeploy": "npm run build && cp build/client/index.html build/client/404.html",
+    "deploy": "gh-pages -d build/client"
   },
   "dependencies": {
     "@react-router/node": "7.14.0",
@@ -20,6 +23,7 @@
   "devDependencies": {
     "@react-router/dev": "7.14.0",
     "@tailwindcss/vite": "^4.2.2",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.3"
   }
