@@ -122,3 +122,64 @@
   font-size: 18px;
   margin: 0;
 }
+
+.modal-favorite-btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--bg-nav);
+  color: var(--text-primary);
+  border: 1px solid var(--text-secondary);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-favorite-btn:hover {
+  background-color: var(--bg-body);
+}
+
+.modal-favorite-btn.active {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: rgba(229, 9, 20, 0.1);
+}
+
+.modal-image-fallback {
+  width: 100%;
+  max-width: 300px;
+  flex-shrink: 0;
+  aspect-ratio: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-nav);
+  color: var(--text-secondary);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+@media (min-width: 768px) {
+  .modal-image-fallback {
+    max-width: 40%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 24px;
+  }
+}
+
+.modal-fallback-icon {
+  font-size: 4rem;
+  margin-bottom: 8px;
+}
+
+.modal-fallback-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+}

@@ -5,6 +5,7 @@ import { TbMovieOff } from "react-icons/tb";
 import "./Image.css";
 
 export default function Image({
+  id,
   title,
   poster_path,
   vote_average,
@@ -43,7 +44,7 @@ export default function Image({
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        movie={{ title, poster_path, vote_average, overview, release_date }}
+        movie={{ id, title, poster_path, vote_average, overview, release_date }}
       />
     </>
   );

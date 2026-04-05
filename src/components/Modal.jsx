@@ -1,12 +1,18 @@
+import { useContext, useState } from "react";
+import MovieContext from "../Context/MovieContext";
 import { TMDB_IMAGE_BASE_URL } from "../api/config";
+import { TbMovieOff } from "react-icons/tb";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import "./Modal.css";
 
 export default function Modal({ isOpen, onClose, movie }) {
+  const { favorites, toggleFavorite } = useContext(MovieContext);
+  const [imageError, setImageError] = useState(false);
   if (!isOpen) return null;
 
-  const imageUrl = movie.poster_path
-    ? `${TMDB_IMAGE_BASE_URL}${movie.poster_path}`
-    : "https://via.placeholder.com/500x750.png?text=Sem+Poster";
+  const hasImage = movie.poster_path && !imageError;
+  const imageUrl = hasImage ? `${TMDB_IMAGE_BASE_URL}${movie.poster_path}` : null;
+  const isFav = favorites.some((f) => f.id === movie.id);
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -15,7 +21,19 @@ export default function Modal({ isOpen, onClose, movie }) {
           &times;
         </button>
         <div className="modal-body">
-          <img src={imageUrl} alt={movie.title} className="modal-image" />
+          {hasImage ? (
+            <img
+              src={imageUrl}
+              alt={movie.title}
+              className="modal-image"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className="modal-image-fallback">
+              <TbMovieOff className="modal-fallback-icon" />
+              <span className="modal-fallback-text">Sem imagem</span>
+            </div>
+          )}
           <div className="modal-info">
             <h2 className="modal-title">{movie.title}</h2>
             <div className="modal-meta">
@@ -32,6 +50,13 @@ export default function Modal({ isOpen, onClose, movie }) {
             <p className="modal-description">
               {movie.overview ? movie.overview : "Descrição não disponível."}
             </p>
+            <button
+              className={`modal-favorite-btn ${isFav ? "active" : ""}`}
+              onClick={() => toggleFavorite(movie)}
+            >
+              {isFav ? <FaHeart color="var(--accent-color)" /> : <FaRegHeart />}
+              <span>{isFav ? "Favoritado" : "Favoritar"}</span>
+            </button>
           </div>
         </div>
       </div>
